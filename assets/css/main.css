@@ -37,16 +37,16 @@
   --nav-dropdown-hover-color: #1b5e20; /* Match desktop GREEN */
 }
 
-/* Default nav link style (all links) */
+/* Default nav link style */
 nav a {
   font-weight: normal;
-  color: #2e7d32;
+  color: var(--nav-color); /* or #2e7d32 */
 }
 
-/* Active nav link style (current page) */
+/* Active nav link style */
 nav a.active {
   font-weight: bold;
-  color: #2e7d32; /* Keeps it green consistently */
+  color: var(--nav-color);
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
