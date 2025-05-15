@@ -39,14 +39,14 @@
 
 /* Default nav link style */
 nav a {
-  font-weight: normal !important;
-  color: var(--nav-color) !important; /* or #2e7d32 */
+  font-weight: normal;
+  color: var(--nav-color); /* or #2e7d32 */
 }
 
 /* Active nav link style */
 nav a.active {
-  font-weight: bold !important;
-  color: var(--nav-color) !important;
+  font-weight: bold;
+  color: var(--nav-color);
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */

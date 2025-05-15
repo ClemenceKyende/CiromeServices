@@ -167,15 +167,20 @@
 
 })();
 
-// JavaScript to add 'active' class to the current page's link
-document.addEventListener("DOMContentLoaded", function() {
-  const currentPath = window.location.pathname.split("/").pop(); // Get the current page's file name
-  const navLinks = document.querySelectorAll('nav a'); // Get all the navigation links
-  
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPath = window.location.pathname.split("/").pop(); // "" or "about.html", etc.
+  const navLinks = document.querySelectorAll("nav a");
+
   navLinks.forEach(link => {
-      // Check if the link's href matches the current page path
-      if (link.href.includes(currentPath)) {
-          link.classList.add('active'); // Add the 'active' class to the current link
-      }
+    // Get href without query/hash (e.g., "about.html")
+    const hrefPath = link.getAttribute("href").split("/").pop();
+
+    // Special handling for root/index
+    if ((currentPath === "" || currentPath === "index.html") && 
+        (hrefPath === "" || hrefPath === "index.html")) {
+      link.classList.add("active");
+    } else if (currentPath === hrefPath) {
+      link.classList.add("active");
+    }
   });
 });
